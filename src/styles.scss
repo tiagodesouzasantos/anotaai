@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/reset.scss';
+@import './assets/scss/fonts.scss';
+@import 'src/assets/scss/ds/colors.scss';
+@import './assets/scss/typography.scss';
+
+body {
+    background-color: $ds-color-light-grey;
+}

@@ -1,0 +1,70 @@
+@import 'src/assets/scss/ds/colors.scss';
+@import 'src/assets/scss/ds/spacing.scss';
+@import 'src/assets/scss/ds/borders.scss';
+
+.input {
+    display: flex;
+
+    &__elem {
+        width: 100%;
+        background-color: $ds-color-white;
+        border: 1px solid $ds-color-medium-grey;
+        padding: $spacing-8;
+        border-radius: $border-radius-sm;
+
+        &:focus, &:focus + .input__icon{
+            border-color: $ds-color-light-blue;
+            box-shadow: 0 0 10px rgba(51, 155, 227, 0.5);
+        }
+    }
+
+    &__sm {
+        height: $spacing-24;
+        font-size: $spacing-16;
+    }
+    
+    &__md {
+        height: $spacing-36;
+        font-size: $spacing-24;
+    }
+    
+    &__lg {
+        height: $spacing-48;
+        font-size: $spacing-36;
+    }
+
+    &__icon {
+        background-color: $ds-color-white;
+        border: 1px solid $ds-color-medium-grey;
+        padding: $spacing-8;
+
+        &__sm {
+            height: $spacing-24;
+            width: $spacing-24;
+        }
+
+        &__md {
+            height: $spacing-36;
+            width: $spacing-36;
+        }
+
+        &__lg {
+            height: $spacing-48;
+            width: $spacing-48;
+        }
+        
+        &--right {
+            border-radius: 0 $border-radius-sm $border-radius-sm 0;
+            &:not(input) {
+                border-left-width: 0;
+            }
+        }
+
+        &--left {
+            border-radius: $border-radius-sm 0 0 $border-radius-sm;
+            &:not(input) {
+                border-right-width: 0;
+            }
+        }
+    }
+}

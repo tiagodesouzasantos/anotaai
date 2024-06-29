@@ -1,0 +1,45 @@
+@import 'src/assets/scss/ds/spacing.scss';
+@import 'src/assets/scss/ds/colors.scss';
+@import 'src/assets/scss/mixins.scss';
+
+@mixin central-line($size, $mr, $ml) {
+    display: inline-block;
+    height: 1px;
+    background-color: $ds-color-dark-grey;
+    width: $size;
+    margin-right: $mr;
+    margin-left: $ml;
+}
+
+.header {
+    @include bottom-shadow;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: $spacing-8;
+    position: relative;
+    background-color: $ds-color-white;
+
+    &__logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        padding: 0 4px; 
+        position: relative;
+        color: $ds-color-dark-grey;
+        font-style: italic;
+
+        &__line {
+            &--left {
+                @include central-line($spacing-8, 4px, 0);
+            }
+            &--right {
+                @include central-line($spacing-36, 0, 4px);
+            }
+        }
+    }
+}

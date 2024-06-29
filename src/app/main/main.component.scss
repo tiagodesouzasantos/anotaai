@@ -1,0 +1,34 @@
+@import "src/assets/scss/ds/spacing.scss";
+@import "src/assets/scss/ds/colors.scss";
+@import "src/assets/scss/variables.scss";
+
+.main {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $spacing-36;
+
+
+  &__search-bar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &__size {
+      width: 90vw;
+
+      @media only screen and (min-width: $desktop) {
+        width: 60vw;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: $spacing-36;
+    gap: $spacing-16;
+  }
+}

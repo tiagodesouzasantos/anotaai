@@ -1,0 +1,21 @@
+@import 'src/assets/scss/ds/borders.scss';
+@import 'src/assets/scss/ds/colors.scss';
+@import 'src/assets/scss/ds/spacing.scss';
+
+.tag {
+    border-radius: $border-radius-sm;
+    padding: 2px $spacing-4;
+    color: $ds-color-white;
+
+    &__pink {
+        background-color: $ds-color-medium-pink;
+    }
+
+    &__light-brown {
+        background-color: $ds-color-light-brown;
+    }
+    
+    &__blue {
+        background-color: $ds-color-medium-blue;
+    }
+}

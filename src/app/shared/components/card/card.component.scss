@@ -1,0 +1,79 @@
+
+@import 'src/assets/scss/ds/borders.scss';
+@import 'src/assets/scss/ds/colors.scss';
+@import 'src/assets/scss/ds/spacing.scss';
+
+.card {
+    background-color: $ds-color-white;
+    border-radius: $border-radius-sm;
+    height: 380px;
+    width: 280px;
+    position: relative;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        border-radius: $border-radius-circle;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        padding: $spacing-4;
+        background-color: $ds-color-white;
+        border: 1px solid $ds-color-medium-grey;
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover {
+            border-color: $ds-color-black;
+        }
+
+        &__icon {
+            transition: transform 0.3s ease, fill 0.3s ease;
+            &:hover {
+                transform: rotate(-90deg);
+                & path {
+                    stroke: $ds-color-medium-red;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 280px;
+        height: 170px;
+        overflow: hidden;
+        position: relative;
+
+        &__tag{
+            position: absolute;
+            z-index: 1;
+            right: $spacing-8;
+            bottom: $spacing-8;
+        }
+        
+        &__elem {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius-sm $border-radius-sm 0 0;
+        }
+    }
+
+    &__content {
+        padding: $spacing-16;
+    }
+
+    &__subtitle {
+        margin-top: $spacing-8;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        overflow: hidden;
+        -webkit-box-orient: vertical; 
+    }
+}

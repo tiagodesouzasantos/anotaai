@@ -1,0 +1,20 @@
+
+<div class="input">
+    <input
+        [(ngModel)]="value"
+        class="input__elem"
+        [class]="'input__'+size"
+        [ngClass]="{'input__icon--left': !!icon && iconPosition === 'right', 'input__icon--right': !!icon && iconPosition==='left'}"
+        [id]="id"
+        type="text"
+        [value]="value"
+        (input)="onInput(value)"
+        autocomplete="off"
+    >
+    <img *ngIf="icon"
+        [class]="'input__icon input__icon__'+size+' input__icon--'+iconPosition"
+        [src]="icon"
+        alt="icone de demonstração do campo"
+
+    >
+</div>

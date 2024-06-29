@@ -1,0 +1,26 @@
+<app-header name="Tiago de Souza Santos"></app-header>
+<main class="main">
+    <div class="main__search-bar">
+        <div class="main__search-bar__size">
+            <form [formGroup]="form">
+                <ds-input-text 
+                formControlName="search"
+                id="search"
+                icon="/assets/images/icons/search.png"
+                ></ds-input-text>
+            </form>
+        </div>
+    </div>
+    <div class="main__cards">
+        <ng-container *ngFor="let item of cardListFilter">
+            <app-card 
+                title="{{item?.title}}"
+                img="{{item?.img}}"
+                description="{{item?.description}}"
+                [tag]="getTagData(item, 'label')"
+                [tagColor]="getTagData(item, 'color')"
+                ($deleteCard)="deleteItem(item)"
+            ></app-card>
+        </ng-container>
+    </div>
+</main>

@@ -1,0 +1,16 @@
+@import 'src/assets/scss/variables.scss';
+
+* {
+    font-family: $ds-font-family;
+}
+
+.subtitle {
+    size: 24px;
+    font-weight: 400;
+}
+
+.weight {
+    &--bold{
+        font-weight: 700;
+    }
+}
